@@ -1,5 +1,5 @@
 use axum::{Router, routing::{delete,get,post,put}};
-use crate::controllers::users::{delete_user,get_user,register_user,update_user};
+use crate::controllers::user::{delete_user,get_user,register_user,update_user};
 
 pub fn user_routes() -> Router {
     Router::new()

@@ -36,7 +36,7 @@ async fn main() {
         .nest_service("/public", ServeDir::new("public"))
         // Application Routes
         .merge(routes::web::web_routes()) // Merge the web routes
-        .merge(Router::new().nest("/api/users", routes::users::user_routes()))
+        .merge(Router::new().nest("/api/user", routes::user::user_routes()))
         // Middleware Layers
         .layer(cors)
         .layer(middleware::from_fn(utils::auth::authorize_user)) // Authorization Middleware
